@@ -1,0 +1,29 @@
+blog - http://wordpress.org/
+events - http://tri.be/wordpress-events-calendar/
+ticket sales - http://tri.be/wordpress-wootickets/
+bookings - ????
+ecommerce - http://www.woothemes.com/woocommerce/
+real estate - https://usabilitydynamics.com/products/wp-property/
+membership - http://member.wishlistproducts.com/
+forums - http://simple-press.com/ or http://bbpress.org/
+client area - ????
+galleries - http://www.advancedcustomfields.com/add-ons/gallery-field/
+social network - http://buddypress.org
+forms - http://www.gravityforms.com/
+courses (including paid) - http://www.woothemes.com/products/sensei/
+wordpress site management - http://infinitewp.com/
+
+slider (full html) - http://www.woothemes.com/flexslider/
+fullpage slider - http://www.buildinternet.com/project/supersized/
+
+support portal - http://www.zendesk.com/
+newsletter - http://mailchimp.com/
+accounting - http://www.freeagent.com/
+backup - http://mozy.co.uk/
+email - mail.google.com
+file sharing - https://www.dropbox.com/
+code repository - https://github.com/
+calendar - https://www.google.com/calendar/
+remote support - http://www.teamviewer.com/
+video - http://www.youtube.com/
+voip - http://beta.skype.com/en/
