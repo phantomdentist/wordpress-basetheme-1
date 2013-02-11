@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.6.2.1.1">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Request a call back]]></title>
+		<confirmation type="message">
+			<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Send]]></text>
+		</button>
+		<fields>
+			<field id="1" isRequired="1" size="medium" type="text">
+				<defaultValue><![CDATA[Name]]></defaultValue>
+				<cssClass><![CDATA[clearit]]></cssClass>
+				<label><![CDATA[Name]]></label>
+			</field>
+			<field id="2" isRequired="1" size="medium" type="text">
+				<defaultValue><![CDATA[Telephone Number]]></defaultValue>
+				<cssClass><![CDATA[clearit]]></cssClass>
+				<label><![CDATA[Telephone Number]]></label>
+			</field>
+		</fields>
+		<notification>
+			<to><![CDATA[tai@tonguetiedmedia.com]]></to>
+			<subject><![CDATA[New submission from {form_title}]]></subject>
+			<message><![CDATA[{all_fields}]]></message>
+		</notification>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+	</form>
+</forms>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.5.2.8">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Contact Form]]></title>
+		<confirmation type="message">
+			<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+		</button>
+		<fields>
+			<field id="1" isRequired="1" size="medium" type="text">
+				<label><![CDATA[Name]]></label>
+			</field>
+			<field id="2" isRequired="1" size="medium" type="email">
+				<label><![CDATA[Contact Email]]></label>
+			</field>
+			<field id="3" size="medium" type="text">
+				<label><![CDATA[Contact Telephone Number]]></label>
+			</field>
+			<field id="5" type="text" isRequired="1" size="medium">
+				<label><![CDATA[Subject]]></label>
+			</field>
+			<field id="4" size="medium" type="textarea">
+				<label><![CDATA[Details]]></label>
+			</field>
+		</fields>
+		<notification>
+			<to><![CDATA[tai@tonguetiedmedia.com]]></to>
+			<subject><![CDATA[New submission from {form_title}]]></subject>
+			<message><![CDATA[{all_fields}]]></message>
+		</notification>
+	</form>
+</forms>

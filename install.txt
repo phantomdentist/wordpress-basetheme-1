@@ -1,0 +1,21 @@
+--Install
+Install Wordpress
+Update Wordpress
+Delete Askimet and Hello Dolly
+Install Plugins
+Update plugins
+Activate plugins
+
+--Theme
+Add pages to functions-setup.php
+Switch to base theme
+
+--Imports
+Menu editor
+Required Advanced Custom Field Sets
+
+--Checks
+Enable Coming Soon Mode in "seedprod-coming-soon-pro" plugin
+
+
+
