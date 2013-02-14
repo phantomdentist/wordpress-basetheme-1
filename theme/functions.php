@@ -230,6 +230,37 @@ class description_walker extends Walker_Nav_Menu
             }
 }
 
+
+/*////////////////////////////////////////////////////////////
+Google analytics
+////////////////////////////////////////////////////////////*/
+function googleAnalytics() {
+	if(function_exists('get_field')){
+		if( get_field('analytics_ua','options') ) {
+			$returnValue = 
+			"<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '".get_field('analytics_ua','options')."']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			</script>
+			";
+			
+			return $returnValue;
+		}	
+	}
+}
+add_action('wp_head', 'your_function');
+
+
+/*////////////////////////////////////////////////////////////
+Custom comments
+////////////////////////////////////////////////////////////*/
 function ttm_customComments($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 ?>
