@@ -111,70 +111,14 @@ return $contactmethods;
 }
 
 /*////////////////////////////////////////////////////////////
-Automatically limit post content length using <?php content(100, __('(more...)')); ?>
+Excerpt length
 ////////////////////////////////////////////////////////////*/
-function close_tags($text) {
-    $patt_open    = "%((?<!</)(?<=<)[\s]*[^/!>\s]+(?=>|[\s]+[^>]*[^/]>)(?!/>))%";
-    $patt_close    = "%((?<=</)([^>]+)(?=>))%";
-	
-    if (preg_match_all($patt_open,$text,$matches))
-    {
-        $m_open = $matches[1];
-        if(!empty($m_open))
-        {
-            preg_match_all($patt_close,$text,$matches2);
-
-            $m_close = $matches2[1];
-
-            if (count($m_open) > count($m_close))
-
-            {
-                $m_open = array_reverse($m_open);
-
-                foreach ($m_close as $tag) $c_tags[$tag]++;
-
-                foreach ($m_open as $k => $tag)    if ($c_tags[$tag]--<=0) $text.='</'.$tag.'>';
-            }
-        }
-    }
-    return $text;
-}
-
-//Content Limit
-function content($num, $more_link_text = '(more...)') {  
-	$theContent = get_the_content($more_link_text);  
-	//$output = preg_replace('/<img[^>]+./','', $theContent);//Use this line if you want images removed from the content on index.php etc  
-	$output = $theContent;  
-	$limit = $num+1;  
-	$content = explode(' ', $output, $limit);  
-	array_pop($content);  
-	$content = implode(" ",$content);  
-    $content = strip_tags($content, '<p><a><address><a><abbr><acronym><b><big><blockquote><br><caption><cite><class><code><col><del><dd><div><dl><dt><em><font><h1><h2><h3><h4><h5><h6><hr><i><img><ins><kbd><li><ol><p><pre><q><s><span><strike><strong><sub><sup><table><tbody><td><tfoot><tr><tt><ul><var>');
-
-	echo close_tags($content);
-	echo '<a class="custom-more-link" href="';
-	the_permalink();
-	echo '">'.$more_link_text.'</a>';
-}
-
-/*////////////////////////////////////////////////////////////
-Function for calling custom content
-////////////////////////////////////////////////////////////*/
-function ttm_customExcerpt($readmore,$tagLimit,$defaultLimit) {
-	//Use excerpt if it exists, if not but a more tag exists use the more tag, if neither exist use an abritary limit
-	if ( has_excerpt() )
-	{
-		the_excerpt();
-		echo '<a class="custom-more-link" href="'.get_permalink().'">'.$readmore.'</a>';
-	}
-	elseif( preg_match('/<!--more(.*?)?-->/', $post->post_content) )
-	{
-		content($tagLimit, __($readmore));//Custom post call using functions.php function
-	}
-	else
-	{
-		content($defaultLimit, __($readmore));//Custom post call using functions.php function to auto limit content length 
-	}
+function excerpt($num, $more) {
+    $limit = $num+1;
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt)."... <a class='more-link' href='" .get_permalink($post->ID) ." '>".$more."</a>";
+    echo $excerpt;
 }
 
 /*////////////////////////////////////////////////////////////
