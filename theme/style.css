@@ -171,8 +171,8 @@ Menus
 .nav-main > ul > li:hover, .nav-main > ul > li:active{}
 
 /*Submenu show/hide*/
-.nav-main > ul > li > ul{height:0; opacity:0; visibility:hidden;}/*Hide menu items in a css3 transitions friendly way*/ 
-.nav-main > ul > li:hover > ul{display:block; height:auto; opacity:1; visibility:visible;}
+.nav-main > ul > li > ul{display:none;}/*Hide menu items in a css3 transitions friendly way*/ 
+.nav-main > ul > li:hover > ul{display:block;}
 
 /*Submenu styling*/
 .nav-main > ul > li > ul.sub-menu{position:absolute;}
@@ -181,8 +181,6 @@ Menus
 .nav-main > ul > li > ul.sub-menu li a{}
 
 /*ie fixes*/
-html.ie8 .nav-main > ul > li > a{display:block; line-height:50px;}/*display table cell doesn't work well in ie7, switches to block*/
-html.ie8 .nav-main > ul > li > ul{display:none;}/*hide submenu totally in ie8 as transition friendly hidding doesn't work in ie8*/
 
 
 /*//////////////////////////////////////
