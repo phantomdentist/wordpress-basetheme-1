@@ -7,7 +7,6 @@ Update plugins
 Activate plugins
 
 --Theme
-Add pages to functions-setup.php
 Switch to base theme
 
 --Imports
