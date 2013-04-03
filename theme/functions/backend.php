@@ -357,7 +357,7 @@ function my_mce_before_init( $settings ) {
     		'title' => 'Intro Paragraph',
     		'selector' => 'p',
     		'classes' => 'intro-paragraph'
-    	),
+    	)/*,
         array(
         	'title' => 'Grey Button',
         	'selector' => 'a',
@@ -370,7 +370,7 @@ function my_mce_before_init( $settings ) {
         		'color' => '#f00',
         		'fontWeight' => 'bold'
         	)
-        )
+        )*/
     );
 
     $settings['style_formats'] = json_encode( $style_formats );
