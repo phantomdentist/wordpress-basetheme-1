@@ -7,6 +7,21 @@
 <!--[if gt IE 9]>  <html <?php language_attributes(); ?>> <![endif]-->
 <!--[if !IE]> <html <?php language_attributes(); ?>> <![endif]-->
 
+<head>
+<!--
+******************************************
+Meta stuff
+******************************************
+-->
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+<title><?php wp_title('');?></title>
+
+<!--
+******************************************
+HTML 5 fixes for older browsers
+******************************************
+-->
 <!--[if lt IE 9]>
    <script>
       document.createElement('header');
@@ -17,16 +32,6 @@
       document.createElement('footer');
    </script>
 <![endif]-->
-
-<head>
-<!--
-******************************************
-Meta stuff
-******************************************
--->
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-<title><?php wp_title('');?></title>
 
 <!--
 ******************************************
