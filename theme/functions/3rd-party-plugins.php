@@ -46,9 +46,9 @@ Advanced Custom Fields options pages
 if(function_exists("register_options_page"))
 {
     register_options_page('Company');
-	register_options_page('Social');
 	//register_options_page('Header');
-	register_options_page('Footer');
+	//register_options_page('Footer');
+	register_options_page('Technical');
 }
 
 /*////////////////////////////////////////////////////////////
