@@ -55,8 +55,7 @@ function ttm_remove_meta_boxes() {
 	//if ( !current_user_can('manage_options') )://if not admin
 	
 	    /*Remove from posts*/
-		remove_meta_box( 'postcustom' , 'post' , 'normal' ); 
-		remove_meta_box( 'slugdiv' , 'post' , 'normal' ); 
+		remove_meta_box( 'postcustom' , 'post' , 'normal' );  
 		remove_meta_box( 'trackbacksdiv' , 'post' , 'normal' );
 		remove_meta_box( 'authordiv', 'post', 'normal' );
 		remove_meta_box( 'pageparentdiv', 'post', 'normal' );
@@ -64,7 +63,7 @@ function ttm_remove_meta_boxes() {
 	    
 		/*Remove from pages*/
 		remove_meta_box( 'postcustom' , 'page' , 'normal' ); 
-		remove_meta_box( 'slugdiv' , 'page' , 'normal' );
+		
 		remove_meta_box( 'trackbacksdiv' , 'page' , 'normal' );
 		remove_meta_box( 'authordiv', 'page', 'normal' );
 		remove_meta_box( 'pageparentdiv', 'page', 'side' );
