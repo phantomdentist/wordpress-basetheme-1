@@ -29,17 +29,17 @@
         
             <?php while ( have_posts() ) : the_post(); ?>
                 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('post index-post'); ?>>
                     
-                    <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>	
+                    <h2 class="editor editor-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>	
                     
                         <?php get_template_part( 'templates/post-info', 'index' );?>
                     
-                    <div class="post-content">
-                            <?php 
-                            if( get_the_excerpt() ) the_excerpt();
-                            else the_content(); 
-                            ?>
+                    <div class="editor editor-content">
+						<?php 
+                        if( get_the_excerpt() ) the_excerpt();
+                        else the_content(); 
+                        ?>
                     </div><!-- end post-content -->
                     
                     <div class="post-pages">

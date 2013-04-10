@@ -10,7 +10,7 @@ if( function_exists('get_field') ) {
 		
 		$image_url = wp_get_attachment_image_src( $attachment_object['id'], $sliderSize);
 		
-		echo '<div class="banner" style="background:url(\''.$image_url[0].'\') left top no-repeat"></div>';
+		echo '<div class="editor banner" style="background:url(\''.$image_url[0].'\') left top no-repeat"></div>';
 	}
 	
 }

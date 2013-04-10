@@ -1,7 +1,7 @@
 <?php get_template_part('templates/wrapper-header'); ?>
 
-   	<h1><?php the_title(); ?></h
-   
+   	<h1><?php the_title(); ?></h1>
+    
     <h2 id="pages">Pages</h2>
     <ul>
     <?php
