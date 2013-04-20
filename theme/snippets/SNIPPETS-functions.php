@@ -6,12 +6,12 @@ wp_deregister_script( 'google-maps-api-v3' );
 wp_register_script( 'google-maps-api-v3', 'http://maps.googleapis.com/maps/api/js?&key=AIzaSyCNxoHu7f79iqUKTWw8T6zOWXX2FNvWioY&sensor=false');
 wp_enqueue_script( 'google-maps-api-v3' );
 
-wp_deregister_script( 'shadowbox' );
-wp_register_script( 'shadowbox', get_template_directory_uri().'/js/shadowbox-3.0.3/shadowbox.js');
-wp_enqueue_script( 'shadowbox' );
+wp_deregister_script( 'fancybox' );
+wp_register_script( 'fancybox', get_template_directory_uri().'/js/fancybox/jquery.fancybox-1.3.4.pack.js');
+wp_enqueue_script( 'fancybox' );
 
-wp_register_style( 'shadowbox-style', get_template_directory_uri().'/js/shadowbox-3.0.3/shadowbox.css' );
-wp_enqueue_style( 'shadowbox-style' );
+wp_register_style( 'fancybox-style', get_template_directory_uri().'/js/fancybox/jquery.fancybox-1.3.4.css' );
+wp_enqueue_style( 'fancybox-style' );
 
 
 /*////////////////////////////////////////////////////////////
