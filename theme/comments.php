@@ -65,25 +65,36 @@ return;
  
 <?php else : ?>
  
-<p class="field-left">
-<label for="author"><small>Your name: <?php if ($req) echo "<span class='comment-required'>required</span>"; ?></small></label>
-<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-</p>
- 
-<p class="field-right">
-<label for="email"><small>Email address: <?php if ($req) echo "<span class='comment-required'>required</span>"; ?></small></label>
-<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-</p>
+<ul>
+    <li class="field-left">
+        <label for="author">Your name: <?php if ($req) echo "<span class='comment-required'>Required</span>"; ?></label>
+        <div class="input-wrapper">
+            <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+        </div>
+    </li>
+     
+    <li class="field-right">
+        <label for="email">Email address: <?php if ($req) echo "<span class='comment-required'>Required</span>"; ?></label>
+        <div class="input-wrapper">
+            <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+        </div>
+    </li>
+</ul>
 
 <div class="clear"></div>
  
 <?php endif; ?>
  
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
+
+<div>
+    <label for="comment">Comments: <?php if ($req) echo "<span class='comment-required'>Required</span>"; ?></label>
+    <div class="input-wrapper">
+        <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+    </div>
+</div>
  
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
- 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="SUBMIT COMMENT" />
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit" />
 <?php comment_id_fields(); ?>
 </p>
 <?php do_action('comment_form', $post->ID); ?>
