@@ -22,7 +22,7 @@ return;
 </div>
  
 <ol class="commentlist">
-<?php wp_list_comments(); ?>
+<?php wp_list_comments('callback=ttm_customComments'); ?>
 </ol>
  
 <div class="navigation">
@@ -43,6 +43,8 @@ return;
  
 <?php if ('open' == $post->comment_status) : ?>
  
+<div class="divider"></div>
+ 
 <div id="respond">
  
 <h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
@@ -55,7 +57,7 @@ return;
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
 <?php else : ?>
  
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="clearfix">
  
 <?php if ( $user_ID ) : ?>
  
@@ -63,14 +65,17 @@ return;
  
 <?php else : ?>
  
-<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label></p>
+<p class="field-left">
+<label for="author"><small>Your name: <?php if ($req) echo "<span class='comment-required'>required</span>"; ?></small></label>
+<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+</p>
  
-<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small>Mail (will not be published) <?php if ($req) echo "(required)"; ?></small></label></p>
- 
-<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<p class="field-right">
+<label for="email"><small>Email address: <?php if ($req) echo "<span class='comment-required'>required</span>"; ?></small></label>
+<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+</p>
+
+<div class="clear"></div>
  
 <?php endif; ?>
  
@@ -78,7 +83,7 @@ return;
  
 <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
  
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="SUBMIT COMMENT" />
 <?php comment_id_fields(); ?>
 </p>
 <?php do_action('comment_form', $post->ID); ?>
