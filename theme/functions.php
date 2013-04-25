@@ -211,7 +211,7 @@ function ttm_customComments($comment, $args, $depth) {
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<div id="comment-<?php comment_ID(); ?>">
 			<div class="comment-author vcard">
-				<?php echo get_avatar($comment, $size = '48', $default = get_bloginfo('stylesheet_directory').'/images/default-avatar.gif' ); ?>
+				<?php echo get_avatar($comment, $size = '48', $default = get_bloginfo('stylesheet_directory').'/images/default-avatar.jpg' ); ?>
 				<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
                 
                 <div class="comment-meta commentmetadata">

@@ -15,12 +15,13 @@ Index:
 	1. 	CSS RESET
 	2. 	BASE HTML TAGS
 	3. 	BASE THEME STRUCTURE
+	4.	THEME TEMPLATES
 	4. 	NAVIGATION
 	5. 	WIDGETS
-	6. 	SLIDERS
 	7. 	FORMS
 	8. 	TABLES
 	9. 	COMMENTS
+	10.	WOOCOMMERCE
 	10.	EDITOR STYLES
 	11.	RESPONSIVE
 	12.	CONDITIONAL/HACKS
@@ -278,6 +279,66 @@ BASE THEME STRUCTURE
 		
 		/*singles page*/
 		.post
+		{
+		
+		}
+
+/*//////////////////////////////
+THEME TEMPLATES
+//////////////////////////////*/
+
+	/* 
+	Flex Slider
+	*/
+
+		.flexslider-container 
+		{
+			overflow:hidden; position: relative;
+		}
+		
+		.flexslider 
+		{
+			width:670px; height:358px; margin: 0; padding: 0;
+		}
+		
+		.flexslider .slides li 
+		{
+			display: none; position: relative; overflow:hidden; width:670px; height:358px;
+		}
+		
+		/* Direction Nav */
+		.flex-direction-nav li a.prev 
+		{
+		
+		}
+		
+		.flex-direction-nav li a.next 
+		{
+		
+		}
+		
+		/* Control Nav */
+		.flex-control-nav 
+		{
+		
+		} 
+		
+		.flex-control-nav li 
+		{
+		
+		}
+		
+		.flex-control-nav li:first-child 
+		{
+		
+		}
+		
+		.flex-control-nav li a 
+		{
+		
+		}
+		
+		.flex-control-nav li a.active 
 		{
 		
 		}
@@ -623,66 +684,6 @@ WIDGETS
 		}
 
 /*//////////////////////////////
-SLIDERS
-//////////////////////////////*/
-
-	/* 
-	Flex Slider
-	*/
-
-		.flexslider-container 
-		{
-			overflow:hidden; position: relative;
-		}
-		
-		.flexslider 
-		{
-			width:670px; height:358px; margin: 0; padding: 0;
-		}
-		
-		.flexslider .slides li 
-		{
-			display: none; position: relative; overflow:hidden; width:670px; height:358px;
-		}
-		
-		/* Direction Nav */
-		.flex-direction-nav li a.prev 
-		{
-		
-		}
-		
-		.flex-direction-nav li a.next 
-		{
-		
-		}
-		
-		/* Control Nav */
-		.flex-control-nav 
-		{
-		
-		} 
-		
-		.flex-control-nav li 
-		{
-		
-		}
-		
-		.flex-control-nav li:first-child 
-		{
-		
-		}
-		
-		.flex-control-nav li a 
-		{
-		
-		}
-		
-		.flex-control-nav li a.active 
-		{
-		
-		}
-
-/*//////////////////////////////
 FORMS
 //////////////////////////////*/
 
@@ -878,6 +879,10 @@ TABLES
 COMMENTS
 //////////////////////////////*/
 
+
+/*//////////////////////////////
+WOOCOMMERCE
+//////////////////////////////*/
 
 
 /*//////////////////////////////
