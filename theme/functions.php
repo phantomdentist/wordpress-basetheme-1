@@ -233,4 +233,25 @@ function ttm_customComments($comment, $args, $depth) {
 		</div>
 <?php
 }
-?>
+
+/*////////////////////////////////////////////////////////////
+Custom Featured Image
+////////////////////////////////////////////////////////////*/
+function acf_featured_image($imageSize) {
+	if( function_exists('get_field') ) {
+	
+		if( get_field('blog_featured_image') ) {
+			
+			$attachment_object = get_field('blog_featured_image');
+	
+			$image_title = $attachment_object['title'];
+			$image_alt = $attachment_object['alt'];
+			//var_dump($attachment_object);
+			
+			$image_url = wp_get_attachment_image_src( $attachment_object['id'], $imageSize);
+			
+			$permalink = get_permalink($post->ID);
+			echo '<a class="acf-featured-image" href="'.$permalink.'"><img class="blog-thumb" src="'.$image_url[0].'" alt="'.$image_alt.'" title="'.$image_title.'"/></a>';
+		}	
+	}
+}

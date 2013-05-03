@@ -1005,22 +1005,22 @@ EDITOR STYLES
 		
 		.editor ol li
 		{
-			list-style:outside decimal;
+			list-style:inside decimal;
 		}
 		
 		.editor ol ol li
 		{
-			list-style-type:lower-roman;
+			list-style-type:upper-alpha;
 		}
 		
 		.editor ol ol ol li
 		{
-			list-style-type:decimal;
+			list-style-type:lower-roman;
 		}
 		
 		.editor ol ol ol ol li
 		{
-			list-style-type:lower-roman;
+			list-style-type:lower-alpha;
 		}
 		
 	/* 
