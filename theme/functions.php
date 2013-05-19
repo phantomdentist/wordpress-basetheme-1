@@ -179,8 +179,8 @@ class description_walker extends Walker_Nav_Menu
 Google analytics
 ////////////////////////////////////////////////////////////*/
 function googleAnalytics() {
-	if(function_exists('get_field')){
-		if( get_field('analytics_ua','options') ) {
+	if( function_exists('get_field') && !is_user_logged_in() && get_field('analytics_ua','options') ){
+		{
 			$returnValue = 
 			"<script>
 			var _gaq = _gaq || [];

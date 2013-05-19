@@ -256,35 +256,6 @@ function hideuptdng()
 }
 add_action('admin_menu','hideuptdng');
 
-/*////////////////////////////////////////////////////////////
-Add custom menu items
-////////////////////////////////////////////////////////////*/
-add_action('admin_menu', 'ttm_register_menus_menu');
-
-function ttm_register_menus_menu() {
-   add_menu_page( 'Menus', 'Menus', 'edit_theme_options', 'nav-menus.php', '', get_template_directory_uri().'/images/admin-menu-icon-menus.png' );//Menus as top level
-}
-
-/////////////////////////////////////////////////////////////
-
-add_action('admin_menu', 'ttm_register_widgets_menu');
-
-function ttm_register_widgets_menu() {
-   add_menu_page( 'Widgets', 'Widgets', 'edit_theme_options', 'widgets.php', '', get_template_directory_uri().'/images/admin-menu-icon-widgets.png' );//Widgets as top level
-}
-
-/*////////////////////////////////////////////////////////////
-Remove menus for non admins
-////////////////////////////////////////////////////////////*/
-add_action('admin_menu','remove_menus');
-
-function remove_menus()
-{
-	if( isset( $roles['administrator'] ) && !current_user_can('administrator') )//if not admin
-	{
-		remove_menu_page('themes.php');//appearance
-	}
-}
 
 /*////////////////////////////////////////////////////////////
 Admin backend css
