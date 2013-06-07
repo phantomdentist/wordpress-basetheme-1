@@ -3,7 +3,13 @@
 <script>
 window.onload = function(){
 	var geocoder = new google.maps.Geocoder();
-	geocoder.geocode({address:'<?php echo do_shortcode('[address]');?>'},function(result,status){
+	geocoder.geocode({address:'<?php
+		echo get_field('address_line_1', 'options').', '.
+		get_field('address_line_2', 'options').', '.
+		get_field('address_town', 'options').', '.
+		get_field('address_county', 'options').', '.
+		get_field('address_postcode', 'options');
+	?>'},function(result,status){
 		if(status==google.maps.GeocoderStatus.OK){
 			
 			var map = new google.maps.Map(document.getElementById("google-map"),{

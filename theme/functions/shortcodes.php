@@ -31,14 +31,18 @@ if(function_exists('get_field')){
 			"town" =>  'true',
 			"county" =>  'true',
 			"postcode" =>  'true',
+			"country" =>  'true',
 			"separator" => ', <br/>'  
 		), $atts));  
 		
-		if( get_field('address_line_1', 'options') && $line1 == 'true' ) $returnValue = get_field('address_line_1', 'options').$separator;
+		$returnValue = '<p class="address">';
+		if( get_field('address_line_1', 'options') && $line1 == 'true' ) $returnValue .= get_field('address_line_1', 'options').$separator;
 		if( get_field('address_line_2', 'options') && $line2 == 'true' ) $returnValue .= get_field('address_line_2', 'options').$separator;
 		if( get_field('address_town', 'options') && $town == 'true' ) $returnValue .= get_field('address_town', 'options').$separator;
 		if( get_field('address_county', 'options') && $county == 'true' ) $returnValue .= get_field('address_county', 'options').$separator;
-		if( get_field('address_postcode', 'options') && $postcode == 'true' ) $returnValue .= get_field('address_postcode', 'options');
+		if( get_field('address_postcode', 'options') && $postcode == 'true' ) $returnValue .= get_field('address_postcode', 'options').$separator;
+		if( get_field('address_country', 'options') && $country == 'true' ) $returnValue .= get_field('address_country', 'options');
+		$returnValue .= '</p>';
 		return $returnValue;
 	}
 	
@@ -49,14 +53,18 @@ if(function_exists('get_field')){
 			"town" =>  'true',
 			"county" =>  'true',
 			"postcode" =>  'true',
+			"country" =>  'true',
 			"separator" => ', <br/>'  
 		), $atts));  
 		
+		$returnValue = '<p class="reg-address">';
 		if( get_field('registeredAddress_line_1', 'options') && $line1 == 'true' ) $returnValue = get_field('registeredAddress_line_1', 'options').$separator;
 		if( get_field('registeredAddress_line_2', 'options') && $line2 == 'true' ) $returnValue .= get_field('registeredAddress_line_2', 'options').$separator;
 		if( get_field('registeredAddress_town', 'options') && $town == 'true' ) $returnValue .= get_field('registeredAddress_town', 'options').$separator;
 		if( get_field('registeredAddress_county', 'options') && $county == 'true' ) $returnValue .= get_field('registeredAddress_county', 'options').$separator;
-		if( get_field('registeredAddress_postcode', 'options') && $postcode == 'true' ) $returnValue .= get_field('registeredAddress_postcode', 'options');
+		if( get_field('registeredAddress_postcode', 'options') && $postcode == 'true' ) $returnValue .= get_field('registeredAddress_postcode', 'options').$separator;
+		if( get_field('registeredAddress_country', 'options') && $country == 'true' ) $returnValue .= get_field('registeredAddress_country', 'options');
+		$returnValue .= '</p>';
 		return $returnValue;
 	}
 	
