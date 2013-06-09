@@ -24,8 +24,16 @@ $(function() {
 
 <!--
 css
-	.ui-tabs { position: relative; padding: .2em; zoom: 1; }
-	.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
-	.ui-tabs .ui-tabs-panel { display: block; border-width: 0; background: none;}
-	.ui-tabs .ui-tabs-hide { display: none !important; }
+	.ui-tabs
+	{
+		position: relative;
+	}
+	.ui-tabs .ui-tabs-panel 
+	{
+		display: block;
+	}
+	.ui-tabs .ui-tabs-hide
+	{
+		display: none!important;
+	}
 -->
