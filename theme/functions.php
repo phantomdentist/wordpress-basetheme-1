@@ -199,7 +199,7 @@ function googleAnalytics() {
 		}	
 	}
 }
-add_action('wp_head', 'your_function');
+add_action('wp_head', 'googleAnalytics');
 
 
 /*////////////////////////////////////////////////////////////
