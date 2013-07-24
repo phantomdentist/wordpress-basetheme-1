@@ -44,7 +44,6 @@ if( function_exists('get_field') ){
 			});
 		</script>
         
-        <!-- Main slider -->
 		<div class="flexslider-container">
 			<div class="flexslider">
 				<ul class="slides">
@@ -70,20 +69,24 @@ if( function_exists('get_field') ){
 			</div>                            
 		</div> 
         
-        <!-- Nav slider -->
         <?php if ( count( get_field('slider_item') ) >= 2 ) { ?>
        	<div class="flexslider-nav-container clearfix">
         	<div class="flexslider-nav">
 				<ul class="slides">
 					<?php while(has_sub_field('slider_item')): ?>
-                        <li class="slider-item">
-                        <?php
-                            $sliderSize = "slider-thumb";
-                            //$image_title = $attachment_object['title'];
-                            $image_alt = $attachment_object['alt'];
-                            //var_dump($attachment_object);
-                            $image_url = wp_get_attachment_image_src( $attachment_object['id'], $sliderSize);
+                    
+						<?php
+						if( get_sub_field('slider_background_image') ) {
+							$attachment_object = get_sub_field('slider_background_image');
+							$sliderSize = "slider-thumb";
+							$image_title = $attachment_object['title'];
+							$image_alt = $attachment_object['alt'];
+							//var_dump($attachment_object);
+							$image_url = wp_get_attachment_image_src( $attachment_object['id'], $sliderSize);
+						}
                         ?>
+                    
+                        <li class="slider-item">
                             <img class="slider-thumb" src="<?php echo $image_url[0] ?>" alt="<?php echo $image_alt ?>" />
                         </li><!-- end slide-item -->  
                     <?php endwhile; ?> 
