@@ -11,16 +11,13 @@ if( function_exists('get_field') ) {
             <ul>
             <?php $x = 1; ?>
             <?php while( has_sub_field('tabs_repeater') ) { ?>
-                <li><a href="#tabs-<?php echo $x; ?>"><?php echo get_sub_field('tab_title'); ?></a></li>
+                <li><a href="#tab-<?php echo $x; ?>"><?php echo get_sub_field('tab_title'); ?></a></li>
             <?php $x++; } ?>
             </ul>
             
-            <div id="tabs-1">
-            </div>
-            
             <?php $x = 1; ?>
             <?php while( has_sub_field('tabs_repeater') ) { ?>
-                <div id="tabs-<?php echo $x; ?>"><?php echo get_sub_field('tab_content'); ?></a></div>
+                <div id="tab-<?php echo $x; ?>"><?php echo get_sub_field('tab_content'); ?></a></div>
             <?php $x++; } ?>
 		</div>
 		<?php
