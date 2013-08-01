@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.7.6">
+	<form labelPlacement="top_label" postAuthor="2" postCategory="1" postFormat="0" postStatus="draft">
+		<title><![CDATA[Review]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+		</button>
+		<fields>
+			<field adminOnly="1" id="1" size="medium" type="post_title">
+				<label><![CDATA[Review title]]></label>
+			</field>
+			<field id="5" size="medium" type="text">
+				<cssClass><![CDATA[field-right]]></cssClass>
+				<label><![CDATA[Your Service Providers Company Name]]></label>
+			</field>
+			<field id="3" isRequired="1" size="medium" type="post_custom_field" postCustomFieldName="review_your_name" inputType="text">
+				<label><![CDATA[Your full name]]></label>
+			</field>
+			<field id="7" size="medium" type="text">
+				<cssClass><![CDATA[field-right]]></cssClass>
+				<label><![CDATA[Job reference number]]></label>
+			</field>
+			<field id="4" isRequired="1" size="medium" type="post_custom_field" postCustomFieldName="review_star_rating" inputType="radio" enableChoiceValue="1">
+				<cssClass><![CDATA[clearfix]]></cssClass>
+				<label><![CDATA[Star rating]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1 star]]></text>
+						<value><![CDATA[1]]></value>
+					</choice>
+					<choice>
+						<text><![CDATA[2 stars]]></text>
+						<value><![CDATA[2]]></value>
+					</choice>
+					<choice>
+						<text><![CDATA[3 stars]]></text>
+						<value><![CDATA[3]]></value>
+					</choice>
+					<choice>
+						<text><![CDATA[4 stars]]></text>
+						<value><![CDATA[4]]></value>
+					</choice>
+					<choice>
+						<text><![CDATA[5 stars]]></text>
+						<value><![CDATA[5]]></value>
+					</choice>
+				</choices>
+			</field>
+			<field id="2" isRequired="1" size="medium" type="post_content">
+				<label><![CDATA[Full review]]></label>
+			</field>
+		</fields>
+		<confirmations>
+			<confirmation id="51f63510be22c" isDefault="1" type="message">
+				<name><![CDATA[Default Confirmation]]></name>
+				<message><![CDATA[Thank you for taking the time to leave a review.]]></message>
+			</confirmation>
+		</confirmations>
+		<notifications>
+			<notification id="51f635109feb2">
+				<to><![CDATA[ken.gray@whiteline.co.uk]]></to>
+				<name><![CDATA[Admin Notification]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[New submission from {form_title} - A Customer Review from PlatinumNRG Website]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+				<from><![CDATA[info@platinumnrg.co.uk]]></from>
+				<fromName><![CDATA[{Your full name:3}]]></fromName>
+			</notification>
+		</notifications>
+	</form>
+</forms>

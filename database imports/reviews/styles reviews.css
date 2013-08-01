@@ -1,0 +1,150 @@
+/*Review form*/
+	
+		#gform_wrapper_3 #gform_submit_button_3
+		{
+			float:none;
+		}
+		
+		#input_3_4 
+		{
+			position:relative;
+			width:92px;
+			height:14px;
+			background:url('images/review-default.png') left top no-repeat;
+		}
+		
+		#input_3_4 label
+		{
+			display:none;
+		}
+		
+		#input_3_4 li
+		{
+			margin:0 0 0 5px;
+			display:inline-block;
+			list-style:none;
+		}
+		
+		#input_3_4 li:first-child
+		{
+			margin:0;
+		}
+		
+		#input_3_4 li input[type="radio"]
+		{
+			position:relative;
+			z-index:10;
+			width:14px;
+			height:14px;
+			padding:0px;
+			border:0px;
+			margin:0;
+		 	-webkit-appearance:none;
+   			-moz-appearance:none;
+   			appearance:none;
+			opacity:0;
+  			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 	/* IE 8 opacity */
+			cursor:pointer;
+		}
+		
+		.review-selected
+		{
+			position:absolute;
+			z-index:5;
+			left:0px;
+			top:0px;
+			display:block;
+			width:0%;
+			height:14px;
+			background:url('images/review-selected.png') left top no-repeat;
+		}
+		
+		.review-selected.per20
+		{
+			width:20%;
+		}
+		
+		.review-selected.per40
+		{
+			width:40%;
+		}
+		
+		.review-selected.per60
+		{
+			width:60%;
+		}
+		
+		.review-selected.per80
+		{
+			width:80%;
+		}
+		
+		.review-selected.per100
+		{
+			width:100%;
+		}
+		
+		/*
+		Review single index
+		*/
+		
+			.post-type-archive-reviews .editor-content
+			{
+				margin-top:10px;
+			}
+		
+		/*
+		Review single page
+		*/
+		
+			.review_star_rating
+			{
+				position:relative;
+				display:block;
+				width:92px;
+				height:14px;
+				margin-top:10px;
+				background:url('images/review-default.png') left top no-repeat;
+			}
+			
+			.review-score
+			{
+				position:absolute;
+				left:0px;
+				top:0px;
+				height:14px;
+				background:url('images/review-selected.png') left top no-repeat;
+			}
+			
+			.review-score.per1
+			{
+				width:20%;
+			}
+			
+			.review-score.per2
+			{
+				width:40%;
+			}
+			
+			.review-score.per3
+			{
+				width:60%;
+			}
+			
+			.review-score.per4
+			{
+				width:80%;
+			}
+			
+			.review-score.per5
+			{
+				width:100%;
+			}
+			
+			.review_text_rating
+			{
+				font-family: Arial, Helvetica, sans-serif;
+				color: #999999;
+				font-style: italic;
+				font-size:12px;
+			}
