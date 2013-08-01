@@ -17,14 +17,15 @@ if( function_exists('get_field') ){
 		<script type="text/javascript">
 			$(window).load(function() {
 				$('.flexslider').flexslider({
-				  animation: "fade",
-				  controlsContainer: ".flexslider-container",
-				  directionNav: false,
-				  slideshow: true,
-				  slideshowSpeed: <?php echo $intervalMultiplied; ?>,
-				  animationLoop: true,           
-				  pauseOnAction: false,
-				  pauseOnHover: true
+				  	animation: "fade",
+				 	directionNav: false,
+					controlNav: true,
+					controlsContainer: ".flexslider-container",
+				  	slideshow: true,
+				  	slideshowSpeed: <?php echo $intervalMultiplied; ?>,
+				  	animationLoop: true,           
+				  	pauseOnAction: false,
+				 	pauseOnHover: true,
 			  });
 			});
 		</script>
@@ -43,14 +44,14 @@ if( function_exists('get_field') ){
 						?>	
 
 						<li class="slider-item" style="background:url('<?php echo $image_url[0] ?>') no-repeat left top;">
-                        	<div class="slide-content">
-                            	<div class="slide-content-background"></div>
-                                <div class="slide-content-info">
-                        			<?php if ( get_sub_field('title') ) echo '<h2 class="slider-title">'.get_sub_field('title').'</h2>'; ?>
-                       				<?php if ( get_sub_field('content') ) echo '<div class="slider-content">'.get_sub_field('content').'</div>'; ?>
-									<?php if ( get_sub_field('link') ) echo '<a class="slider-link" href="'.get_sub_field('link').'">Find out more</a>'; ?>
-                                </div>
-                            </div><!-- end slide-content -->   
+                        	<?php if( get_sub_field('title') ): ?>
+                                <div class="slide-content">
+                                    <?php if ( get_sub_field('title') ) echo '<h2 class="slide-title">'.get_sub_field('title').'</h2>'; ?>
+                                    <?php if ( get_sub_field('subtitle') ) echo '<div class="slide-subtitle">'.get_sub_field('subtitle').'</div>'; ?>
+                                    <?php if ( get_sub_field('excerpt') ) echo '<div class="slide-excerpt">'.get_sub_field('excerpt').'</div>'; ?>
+                                    <?php if ( get_sub_field('link') ) echo '<a class="slide-link" href="'.get_sub_field('link').'">Find out more</a>'; ?>
+                                </div><!-- end slide-content -->   
+                            <?php endif; ?>
 						</li><!-- end slide-item -->       
 					<?php endwhile; ?> 
 				</ul>
@@ -59,4 +60,5 @@ if( function_exists('get_field') ){
 	<?php 
 	endif; 
 }
+?>                                                                              
 ?>      
