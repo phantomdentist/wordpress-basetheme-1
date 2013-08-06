@@ -20,11 +20,11 @@ include('functions/advanced-custom-fields.php');
 ////////////////////////////////////////////////////////////*/
 function ttm_register_scripts() {
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+	wp_register_script( 'jquery', get_template_directory_uri().'/js/jquery-1.10.2.min.js');
 	wp_enqueue_script( 'jquery' );
 	
 	wp_deregister_script( 'jquery-ui' );
-	wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js');
+	wp_register_script( 'jquery-ui', get_template_directory_uri().'/js/jquery-ui-1.10.3.custom.min.js');
 	wp_enqueue_script( 'jquery-ui' );
 	
 	wp_deregister_script( 'flexslider-min' );
