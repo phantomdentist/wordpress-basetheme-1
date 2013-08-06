@@ -13,6 +13,7 @@ include('functions/widgets.php');
 include('functions/shortcodes.php');
 include('functions/3rd-party-plugins.php');
 include('functions/setup.php');
+include('functions/advanced-custom-fields.php');
 
 /*////////////////////////////////////////////////////////////
 //Register main scripts
