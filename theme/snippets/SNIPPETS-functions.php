@@ -7,10 +7,10 @@ wp_register_script( 'google-maps-api-v3', 'http://maps.googleapis.com/maps/api/j
 wp_enqueue_script( 'google-maps-api-v3' );
 
 wp_deregister_script( 'fancybox' );
-wp_register_script( 'fancybox', get_template_directory_uri().'/js/fancybox/jquery.fancybox-1.3.4.pack.js');
+wp_register_script( 'fancybox', get_template_directory_uri().'/js/fancybox/jquery.fancybox.pack.js');
 wp_enqueue_script( 'fancybox' );
 
-wp_register_style( 'fancybox-style', get_template_directory_uri().'/js/fancybox/jquery.fancybox-1.3.4.css' );
+wp_register_style( 'fancybox-style', get_template_directory_uri().'/js/fancybox/jquery.fancybox.css' );
 wp_enqueue_style( 'fancybox-style' );
 
 
