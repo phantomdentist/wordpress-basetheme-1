@@ -112,14 +112,24 @@ return $contactmethods;
 }
 
 /*////////////////////////////////////////////////////////////
-Excerpt length
+Custom excerpt
 ////////////////////////////////////////////////////////////*/
-function excerpt($num, $more) {
-    $limit = $num+1;
-    $excerpt = explode(' ', get_the_excerpt(), $limit);
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt)."... <a class='more-link' href='" .get_permalink($post->ID) ." '>".$more."</a>";
-    echo $excerpt;
+function custom_excerpt($num, $more) {
+	
+	$limit = $num+1;
+	
+	if ( has_excerpt() ) {
+		the_excerpt();
+		$more = "... <a class='more-link' href='" .get_permalink($post->ID) ." '>".$more."</a>";
+		echo $more;
+	}
+	else
+	{
+		$excerpt = explode(' ', get_the_excerpt(), $limit);
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt)."... <a class='more-link' href='" .get_permalink($post->ID) ." '>".$more."</a>";
+		echo $excerpt;
+	}
 }
 
 /*////////////////////////////////////////////////////////////
