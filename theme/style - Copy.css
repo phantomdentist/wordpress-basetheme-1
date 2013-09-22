@@ -1,0 +1,1038 @@
+/*
+Theme Name: Blank Theme
+Theme URI: 
+Description: Style and structure removed
+Version: 5.0
+Author: Tai Havard
+Author URI: 
+Tags: threaded-comments
+License:
+License URI:
+*/
+
+/*
+Index:
+	1. 	CSS RESET
+	2. 	BASE
+	3. 	BASE RESET
+	4. 	BASE THEME STRUCTURE
+	5.	THEME TEMPLATES
+	6. 	NAVIGATION
+	7. 	WIDGETS
+	8. 	FORMS
+	9. 	TABLES
+	10. COMMENTS
+	11.	WOOCOMMERCE
+	12.	EDITOR STYLES
+	13.	RESPONSIVE
+	14.	CONDITIONAL/HACKS
+	15. UTILITY
+*/
+
+@import url("css/base-gravity-forms.css");
+
+/*//////////////////////////////
+CSS RESET
+//////////////////////////////*/
+
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, nav, footer, header, article, aside{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+	
+	body 
+	{
+		line-height: 1;
+	}
+	
+	ol,
+	ul 
+	{
+		list-style: none;
+	}
+	
+	blockquote, 
+	q 
+	{
+		quotes: none;
+	}
+	
+	blockquote:before, 
+	blockquote:after,
+	q:before, 
+	q:after 
+	{
+		content: '';
+		content: none;
+	}
+	
+	/* remember to define focus styles! */
+	:focus 
+	{
+		outline: 0;
+	}
+	
+	/* remember to highlight inserts somehow! */
+	ins 
+	{
+		text-decoration: none;
+	}
+	
+	del 
+	{
+		text-decoration: line-through;
+	}
+	
+	/* tables still need 'cellspacing="0"' in the markup */
+	table 
+	{
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	header, 
+	nav, 
+	section, 
+	article, 
+	aside, 
+	footer 
+	{
+		display:block;
+	}
+
+/*//////////////////////////////
+BASE
+//////////////////////////////*/
+
+	b, strong
+	{
+		font-weight:bold;
+	}
+	
+	i
+	{
+		font-style:italic;
+	}
+	
+	del
+	{
+		text-decoration:line-through;
+	}
+	
+	u
+	{
+		text-decoration:underline;
+	} 
+	
+	blockquote
+	{
+		font-style:italic; padding:0 20px;
+	}
+	
+	small
+	{
+		font-size:12px; color:#B3B3B3;
+	} 
+	
+	hr
+	{
+		border:none; color:#fff; border-bottom:solid 1px #E5E5E5; margin-bottom:20px;
+	}
+	
+	q
+	{
+		font-style:italic;
+	}
+	
+	img 
+	{
+		border:solid 2px #F4F4F4;
+	}
+	
+	p 
+	{
+		margin: 0 0 20px 0;
+	}
+	
+	/* 
+	Anchors
+	*/
+	
+		a 
+		{
+
+		}
+		
+		a:hover,
+		a:active
+		{
+			text-decoration: underline;
+		}
+		
+	
+	/* 
+	Lists 
+	*/	
+		
+		ul, 
+		ol
+		{
+			margin:0 0 20px 15px;
+		}
+		
+		ul ul, 
+		ol ol
+		{
+			margin:0 0 0 15px;
+		}
+		
+		ul ul ul, 
+		ol ol ol
+		{
+			margin:0 0 0 15px;
+		}
+		
+		ul ul ul ul, 
+		ol ol ol ol
+		{
+			margin:0 0 0 15px;
+		}
+		
+		ul li
+		{
+			list-style:outside disc;
+		}
+		
+		ul ul li
+		{
+			list-style-type:circle;
+		}
+		
+		ul ul ul li
+		{
+			list-style-type:square;
+		}
+		
+		ul ul ul ul li
+		{
+			list-style-type:disc;
+		}
+		
+		ol li
+		{
+			list-style:inside decimal;
+		}
+		
+		ol ol li
+		{
+			list-style-type:upper-alpha;
+		}
+		
+		ol ol ol li
+		{
+			list-style-type:lower-roman;
+		}
+		
+		ol ol ol ol li
+		{
+			list-style-type:lower-alpha;
+		}
+		
+	/* 
+	Headings 
+	*/
+	
+		h1
+		{
+			
+		}
+		
+		h2
+		{
+			
+		}
+		
+		h3
+		{
+			
+		}
+		
+		h4
+		{
+			
+		}
+		
+		h5
+		{
+		
+		}
+		
+		h6
+		{
+		
+		}
+		
+	/* 
+	Headings Anchors 
+	*/
+		
+		h1 a
+		{
+		
+		}
+		
+		h2 a
+		{
+		
+		}
+		
+		h3 a
+		{
+		
+		}
+		
+		h4 a
+		{
+		
+		}
+		
+		h5 a
+		{
+		
+		}
+		
+		h6 a
+		{
+		
+		}
+
+	/* 
+	Images 
+	*/
+
+		.alignleft, 
+		img.alignleft 
+		{
+			margin-right: 1.5em; display: inline; float: left;
+		}
+		
+		.alignright, 
+		img.alignright 
+		{
+			margin-left: 1.5em; display: inline; float: right;
+		}
+		
+		.aligncenter, 
+		img.aligncenter 
+		{
+			margin-right: auto; margin-left: auto; display: block; clear: both;
+		}
+		
+		.alignnone, 
+		img.alignnone 
+		{
+		
+		}
+
+	/* 
+	Captions 
+	*/
+	
+		.wp-caption 
+		{
+			margin-bottom: 1.5em; text-align: center; padding-top: 5px;
+		}
+		
+		.wp-caption img 
+		{
+			border: 0 none; padding: 0; margin: 0;
+
+		}
+		
+		.wp-caption p.wp-caption-text 
+		{
+			line-height: 1.5; font-size: 10px; margin: 0;
+		}
+
+		/* Quotes */
+		.wp-smiley 
+		{
+			margin: 0 !important; max-height: 1em;
+		}
+		
+		blockquote.left 
+		{
+			margin-right: 20px; text-align: right; margin-left: 0; width: 33%; float: left;
+		}
+		
+		blockquote.right 
+		{
+			margin-left: 20px; text-align: left; margin-right: 0; width: 33%; float: right;
+		}
+
+/*//////////////////////////////
+BASE THEME STRUCTURE
+//////////////////////////////*/
+
+	/*
+	Global
+	*/
+
+		body
+		{
+		
+		}
+	
+		.wrapper-main
+		{
+		
+		}
+	
+	/*
+	Header
+	*/
+	
+		.header
+		{
+		
+		}
+		
+		.logo
+		{
+			text-indent:-1000em;
+		}
+	
+	/*
+	Content
+	*/
+	
+		.container-main
+		{
+		
+		}
+		
+		.content
+		{
+		
+		}
+	
+		.sidebar
+		{
+		
+		}
+		
+	/*
+	Footer
+	*/
+	
+		.footer
+		{
+		
+		}
+	
+	/*
+	Posts
+	*/	
+	
+		/*post index and archives*/
+		.index-post
+		{
+		
+		}
+		
+		/*singles page*/
+		.post
+		{
+		
+		}
+
+/*//////////////////////////////
+NAVIGATION
+//////////////////////////////*/
+
+	/*
+	Wordpress dynamic menus
+	*/
+
+		/*Main nav styling*/
+	
+			.nav-main
+			{
+			
+			}
+			
+			.nav-main > ul > li
+			{
+				position:relative;
+			}
+			
+			.nav-main > ul > li:first-child
+			{
+				margin-left:0; background:none;
+			}
+			
+			.nav-main > ul > li > a
+			{
+				display:table-cell; vertical-align:middle;
+			}
+			
+			/*Hover and active states*/
+			.nav-main > ul > li.current_page_item > a,
+			.nav-main > ul > li.current-page-parent > a,
+			.nav-main > ul > li.current-page-ancestor > a
+			{
+			
+			}
+			
+			.nav-main > ul > li.current-menu-item > a, 
+			.nav-main > ul > li.current-menu-parent > a, 
+			.nav-main > ul > li.current-menu-ancestor > a
+			{
+			
+			}
+			
+			.nav-main > ul > li:hover, 
+			.nav-main > ul > li:active
+			{
+			
+			}
+			
+			/*Submenu show/hide*/
+			.nav-main > ul > li > ul
+			{
+				display:none;
+			}
+			
+			.nav-main > ul > li:hover > ul
+			{
+				display:block;
+			}
+			
+			/*Submenu styling*/
+			.nav-main > ul > li > ul.sub-menu
+			{
+				position:absolute;
+			}
+			
+			.nav-main > ul > li > ul.sub-menu li
+			{
+			
+			}
+			
+			.nav-main > ul > li > ul.sub-menu li:first-child
+			{
+				margin-left:0;
+			}
+			
+			.nav-main > ul > li > ul.sub-menu li a
+			{
+			
+			}
+
+/*//////////////////////////////
+THEME TEMPLATES
+//////////////////////////////*/
+
+	/* 
+	Flex Slider
+	*/
+
+		.flexslider-container 
+		{
+			overflow:hidden; position: relative;
+		}
+		
+		.flexslider 
+		{
+			width:670px; height:358px; margin: 0; padding: 0;
+		}
+		
+		.flexslider .slides li 
+		{
+			display: none; position: relative; overflow:hidden; width:670px; height:358px;
+		}
+		
+		/* Direction Nav */
+		.flex-direction-nav li a.prev 
+		{
+		
+		}
+		
+		.flex-direction-nav li a.next 
+		{
+		
+		}
+		
+		/* Control Nav */
+		.flex-control-nav 
+		{
+		
+		} 
+		
+		.flex-control-nav li 
+		{
+		
+		}
+		
+		.flex-control-nav li:first-child 
+		{
+		
+		}
+		
+		.flex-control-nav li a 
+		{
+		
+		}
+		
+		.flex-control-nav li a.flex-active
+		{
+		
+		}
+
+
+/*//////////////////////////////
+WIDGETS
+//////////////////////////////*/
+	
+	/*
+	Global Widget Styles
+	*/
+	
+		.widget-container
+		{
+		
+		}
+		
+		.widget-title
+		{
+		
+		}
+		
+		.widget-content
+		{
+		
+		}
+		
+		.widget-footer
+		{
+		
+		} 
+		
+		.parent-page-children, 
+		.widget_categories .widget-content > ul, 
+		.widget_archive .widget-content > ul, 
+		.widget_tmm_cta_widget .widget-content, 
+		.widget_nav_menu > ul, 
+		.textwidget
+		{
+		
+		}
+	
+	/* 
+	child sibling menu 
+	*/
+	
+		.widget_tmm_child_parent_menu
+		{
+		
+		}
+		
+		.widget_tmm_child_parent_menu ul
+		{
+		
+		} 
+		
+		.widget_tmm_child_parent_menu ul li
+		{
+		
+		} 
+		
+		.widget_tmm_child_parent_menu ul li a
+		{
+		
+		} 
+		
+		.widget_tmm_child_parent_menu ul li a:hover, 
+		.widget_tmm_child_parent_menu ul li a:active
+		{
+		
+		}
+		
+		.widget_tmm_child_parent_menu ul li.current_page_item a
+		{
+		
+		}
+	
+	/* 
+	menu widget 
+	*/
+	
+		.widget_nav_menu 
+		{
+		
+		}
+		
+		.widget_nav_menu ul 
+		{
+		
+		}
+		
+		.widget_nav_menu ul li 
+		{
+		
+		}
+		
+		.widget_nav_menu ul li a 
+		{
+		
+		}
+
+		
+	/* 
+	archives widget
+	*/
+	 
+		.widget_archive
+		{
+		
+		}
+		
+		.widget_archive ul 
+		{
+		
+		}
+		
+		.widget_archive ul li 
+		{
+		
+		} 
+		
+		.widget_archive ul li a 
+		{
+		
+		}
+		
+		
+	/* 
+	category widget 
+	*/
+	
+		.widget_categories 
+		{
+		
+		}
+		
+		.widget_categories ul 
+		{
+		
+		}
+		
+		.widget_categories ul li 
+		{
+		
+		}
+		
+		.widget_categories a 
+		{
+		
+		}
+		
+	/* 
+	text widget 
+	*/
+		.textwidget 
+		{
+		
+		}
+		
+		.widget_text 
+		{
+		
+		}
+		
+		.textwidget p 
+		{
+		
+		}
+
+/*//////////////////////////////
+FORMS
+//////////////////////////////*/
+
+	
+	/* 
+	Form global styles
+	*/
+		
+		input[type="text"],
+		input[type="number"],
+		input[type="password"],
+		input[type="email"],
+		select,
+		textarea
+		{
+			padding:5px; 
+			border:solid 1px #E7E7E7; 
+			margin-left:4px; /*accounts for box shadow*/
+			box-shadow:0px 0px 0px 4px #F4F4F4;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			font-size:12px;
+			background-color:#fff;
+		}
+		
+	/* 
+	Field specific styles
+	*/
+	
+		form
+		{
+		
+		}
+		
+		label
+		{
+			
+		}
+		
+		input[type="text"],
+		input[type="number"],
+		input[type="password"],
+		input[type="email"]
+		{
+			height:24px;
+		}
+		
+		input[type="checkbox"]
+		{
+			
+		}
+		
+		input[type="checkbox"]:checked
+		{
+			
+		}
+		
+		textarea
+		{
+		
+		}
+		
+		select
+		{
+		
+		}
+		
+		option
+		{
+		
+		}
+		
+		optgroup
+		{
+		
+		}
+		
+		button
+		{
+		
+		}
+		
+		input[type="submit"]
+		{
+			cursor:pointer;
+		}
+		
+		input[type="submit"]:hover,
+		input[type="submit"]:active
+		{
+			
+		}
+	
+		fieldset
+		{
+		
+		}
+		
+		legend
+		{
+		
+		}
+		
+	/* 
+	floated fields
+	*/
+		
+		form .field-left
+		{
+			width:49%;
+			margin-right:5px;
+			float:left;
+		}
+		
+		form .field-right
+		{
+			width:49%;
+			margin-right:5px;
+			float:right;
+		}
+		
+		
+	/* 
+	Gravity forms
+	*/
+	
+		.gform_wrapper ul,
+		.gform_wrapper li
+		{
+			margin:0px;
+			list-style:none;
+		}
+		
+		li.gfield
+		{
+			
+		}
+		
+		.gsection_title
+		{
+			
+		}
+
+		.gfield_required
+		{
+			
+		}
+		
+		.validation_error
+		{
+			
+		}
+		
+		.gfield_error input
+		{
+			
+		}
+
+		.validation_message
+		{
+			
+		}
+	
+	
+	/* 
+	Form specific
+	*/
+
+		
+/*//////////////////////////////
+TABLES
+//////////////////////////////*/
+
+	table
+	{
+	
+	}
+	
+	tbody
+	{
+	
+	}
+	
+	thead
+	{
+	
+	}
+	
+
+	tfoot
+	{
+	
+	}
+	
+	tr
+	{
+	
+	}
+	
+	td
+	{
+	
+	}
+	
+	th
+	{
+	
+	}
+	
+	col
+	{
+	
+	}
+	
+	
+/*//////////////////////////////
+COMMENTS
+//////////////////////////////*/
+
+
+/*//////////////////////////////
+WOOCOMMERCE
+//////////////////////////////*/
+
+
+		
+/*//////////////////////////////
+RESPONSIVE
+//////////////////////////////*/
+
+
+
+/*//////////////////////////////
+CONDITIONAL/HACKS
+//////////////////////////////*/
+
+
+
+/*//////////////////////////////////////
+UTILITY
+//////////////////////////////////////*/
+
+	.clearfix:after 
+	{
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	.clearfix 
+	{ 
+		display: inline-block; 
+	}
+	
+	
+	* html .clearfix 
+	{ 
+		height:1%; 
+	}
+	
+	.clearfix 
+	{ 
+		display: block; 
+	}
+	
+	.clear
+	{ 
+		clear: both; 
+	}

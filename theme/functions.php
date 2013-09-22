@@ -23,13 +23,23 @@ function ttm_register_scripts() {
 	wp_register_script( 'jquery', get_template_directory_uri().'/js/jquery-1.10.2.min.js');
 	wp_enqueue_script( 'jquery' );
 	
+	/*
 	wp_deregister_script( 'jquery-ui' );
 	wp_register_script( 'jquery-ui', get_template_directory_uri().'/js/jquery-ui-1.10.3.custom.min.js');
 	wp_enqueue_script( 'jquery-ui' );
+	*/
 	
+	/*
+	wp_deregister_script( 'jkit' );
+	wp_register_script( 'jkit', get_template_directory_uri().'/js/jquery.jkit.1.1.29.min.js');
+	wp_enqueue_script( 'jkit' );
+	*/
+	
+	/*
 	wp_deregister_script( 'flexslider-min' );
 	wp_register_script( 'flexslider-min', get_template_directory_uri().'/js/jquery.flexslider-min.js');
 	wp_enqueue_script( 'flexslider-min' );
+	*/
 	
 	wp_deregister_script( 'utility' );
 	wp_register_script( 'utility', get_template_directory_uri().'/js/utility.js');
@@ -67,7 +77,7 @@ register_nav_menus(array('menu-main' => __( 'Main Navigation' ),'menu-footer' =>
 Add new image sizes
 ////////////////////////////////////////////////////////////*/
 if (function_exists('add_image_size')){
-	add_image_size( 'slider', 960, 300, true );
+	add_image_size( 'carousel', 960, 300, true );
 } 
 
 /*////////////////////////////////////////////////////////////
@@ -93,7 +103,6 @@ function ttm_no_more_jumping($post) {
 	return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
 }
 add_filter('excerpt_more', 'ttm_no_more_jumping');
-
 
 
 /*////////////////////////////////////////////////////////////
@@ -185,7 +194,6 @@ class description_walker extends Walker_Nav_Menu
             }
 }
 
-
 /*////////////////////////////////////////////////////////////
 Google analytics
 ////////////////////////////////////////////////////////////*/
@@ -251,9 +259,9 @@ Custom Featured Image
 function acf_featured_image($imageSize) {
 	if( function_exists('get_field') ) {
 	
-		if( get_field('blog_featured_image') ) {
+		if( get_field('acf_featured_image') ) {
 			
-			$attachment_object = get_field('blog_featured_image');
+			$attachment_object = get_field('acf_featured_image');
 	
 			$image_title = $attachment_object['title'];
 			$image_alt = $attachment_object['alt'];
@@ -262,7 +270,7 @@ function acf_featured_image($imageSize) {
 			$image_url = wp_get_attachment_image_src( $attachment_object['id'], $imageSize);
 			
 			$permalink = get_permalink($post->ID);
-			echo '<a class="acf-featured-image" href="'.$permalink.'"><img class="blog-thumb" src="'.$image_url[0].'" alt="'.$image_alt.'" title="'.$image_title.'"/></a>';
+			echo '<a class="acf-featured-image" href="'.$permalink.'"><img class="thumb" src="'.$image_url[0].'" alt="'.$image_alt.'" title="'.$image_title.'"/></a>';
 		}	
 	}
 }

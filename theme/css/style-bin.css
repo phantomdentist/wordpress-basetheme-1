@@ -1,0 +1,58 @@
+	/* 
+	Flex Slider
+	*/
+		.flexslider-container 
+		{
+			overflow:hidden; position: relative;
+		}
+		
+		.flexslider 
+		{
+			width:670px; height:358px; margin: 0; padding: 0;
+		}
+		
+		.flexslider .slides li 
+		{
+			display: none; position: relative; overflow:hidden; width:670px; height:358px;
+		}
+		
+		/* 
+		Direction Nav 
+		*/
+			.flex-direction-nav li a.prev 
+			{
+			
+			}
+			
+			.flex-direction-nav li a.next 
+			{
+			
+			}
+		
+		/* 
+		Control Nav 
+		*/
+			.flex-control-nav 
+			{
+			
+			} 
+			
+			.flex-control-nav li 
+			{
+			
+			}
+			
+			.flex-control-nav li:first-child 
+			{
+			
+			}
+			
+			.flex-control-nav li a 
+			{
+			
+			}
+			
+			.flex-control-nav li a.flex-active
+			{
+			
+			}
