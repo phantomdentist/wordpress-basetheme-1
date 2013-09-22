@@ -56,3 +56,162 @@
 			{
 			
 			}
+				
+			
+	/*
+	Widgets
+	*/
+		/*
+		Global Widget Styles
+		*/
+			.widget-container
+			{
+			
+			}
+			
+			.widget-title
+			{
+			
+			}
+			
+			.widget-content
+			{
+			
+			}
+			
+			.widget-footer
+			{
+			
+			} 
+			
+			.parent-page-children, 
+			.widget_categories .widget-content > ul, 
+			.widget_archive .widget-content > ul, 
+			.widget_tmm_cta_widget .widget-content, 
+			.widget_nav_menu > ul, 
+			.textwidget
+			{
+			
+			}
+		
+		/* 
+		child sibling menu 
+		*/
+			.widget_tmm_child_parent_menu
+			{
+			
+			}
+			
+			.widget_tmm_child_parent_menu ul
+			{
+			
+			} 
+			
+			.widget_tmm_child_parent_menu ul li
+			{
+			
+			} 
+			
+			.widget_tmm_child_parent_menu ul li a
+			{
+			
+			} 
+			
+			.widget_tmm_child_parent_menu ul li a:hover, 
+			.widget_tmm_child_parent_menu ul li a:active
+			{
+			
+			}
+			
+			.widget_tmm_child_parent_menu ul li.current_page_item a
+			{
+			
+			}
+		
+		/* 
+		menu widget 
+		*/
+			.widget_nav_menu 
+			{
+			
+			}
+			
+			.widget_nav_menu ul 
+			{
+			
+			}
+			
+			.widget_nav_menu ul li 
+			{
+			
+			}
+			
+			.widget_nav_menu ul li a 
+			{
+			
+			}
+	
+			
+		/* 
+		archives widget
+		*/
+			.widget_archive
+			{
+			
+			}
+			
+			.widget_archive ul 
+			{
+			
+			}
+			
+			.widget_archive ul li 
+			{
+			
+			} 
+			
+			.widget_archive ul li a 
+			{
+			
+			}
+				
+		/* 
+		category widget 
+		*/
+			.widget_categories 
+			{
+			
+			}
+			
+			.widget_categories ul 
+			{
+			
+			}
+			
+			.widget_categories ul li 
+			{
+			
+			}
+			
+			.widget_categories a 
+			{
+			
+			}
+			
+		/* 
+		text widget 
+		*/
+			.textwidget 
+			{
+			
+			}
+			
+			.widget_text 
+			{
+			
+			}
+			
+			.textwidget p 
+			{
+			
+			}

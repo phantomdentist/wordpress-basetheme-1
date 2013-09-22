@@ -11,13 +11,49 @@ License URI:
 */
 
 /*
+Selectors:
+
+	http://www.w3schools.com/cssref/css_selectors.asp
+	* - any
+	+ - adjacent sibling
+	~ - general sibling
+	:link
+	:visited
+	:active
+	:hover
+	:focus
+	:first-letter
+	:first-line
+	:first-child
+	:last-child
+	:before
+	:after
+	:first-of-type
+	:last-of-type
+	:only-of-type
+	:only-child
+	:nth-child(n)
+	:nth-last-child(n)
+	:nth-of-type(n)
+	:nth-last-of-type(n)
+	:last-child
+	:empty
+	:target
+	:enabled
+	:disabled
+	:checked
+	:not(selector)
+	::selection
+*/
+
+/*
 Index:
-	1. 	RESET 					(reset-base.css)
-	2. 	BASE 					(reset-base.css)
-	3. 	GLOBAL
-	4. 	BASE STRUCTURE
-	5.	STYLES
-	6.	CONDITIONAL/HACKS
+	sec1.RESET 				(reset-base.css)
+	sec2.BASE 					(reset-base.css)
+	sec3.GLOBAL
+	sec4.BASE STRUCTURE
+	sec5.STYLES
+	sec6.CONDITIONAL/HACKS
 */
 
 @import url("css/reset-base.css");
@@ -25,7 +61,7 @@ Index:
 /*@import url("css/base-woocommerce.css");*/
 
 /*//////////////////////////////
-GLOBAL
+sec3.GLOBAL
 //////////////////////////////*/
 	
 	/*
@@ -307,7 +343,7 @@ GLOBAL
 			}
 
 /*//////////////////////////////
-BASE STRUCTURE
+sec4.BASE STRUCTURE
 //////////////////////////////*/
 
 	/*
@@ -444,7 +480,7 @@ BASE STRUCTURE
 		
 		
 /*//////////////////////////////
-STYLES
+sec5.STYLES
 //////////////////////////////*/
 
 	/*
@@ -486,160 +522,6 @@ STYLES
 	/*
 	Widgets
 	*/
-		/*
-		Global Widget Styles
-		*/
-			.widget-container
-			{
-			
-			}
-			
-			.widget-title
-			{
-			
-			}
-			
-			.widget-content
-			{
-			
-			}
-			
-			.widget-footer
-			{
-			
-			} 
-			
-			.parent-page-children, 
-			.widget_categories .widget-content > ul, 
-			.widget_archive .widget-content > ul, 
-			.widget_tmm_cta_widget .widget-content, 
-			.widget_nav_menu > ul, 
-			.textwidget
-			{
-			
-			}
-		
-		/* 
-		child sibling menu 
-		*/
-			.widget_tmm_child_parent_menu
-			{
-			
-			}
-			
-			.widget_tmm_child_parent_menu ul
-			{
-			
-			} 
-			
-			.widget_tmm_child_parent_menu ul li
-			{
-			
-			} 
-			
-			.widget_tmm_child_parent_menu ul li a
-			{
-			
-			} 
-			
-			.widget_tmm_child_parent_menu ul li a:hover, 
-			.widget_tmm_child_parent_menu ul li a:active
-			{
-			
-			}
-			
-			.widget_tmm_child_parent_menu ul li.current_page_item a
-			{
-			
-			}
-		
-		/* 
-		menu widget 
-		*/
-			.widget_nav_menu 
-			{
-			
-			}
-			
-			.widget_nav_menu ul 
-			{
-			
-			}
-			
-			.widget_nav_menu ul li 
-			{
-			
-			}
-			
-			.widget_nav_menu ul li a 
-			{
-			
-			}
-	
-			
-		/* 
-		archives widget
-		*/
-			.widget_archive
-			{
-			
-			}
-			
-			.widget_archive ul 
-			{
-			
-			}
-			
-			.widget_archive ul li 
-			{
-			
-			} 
-			
-			.widget_archive ul li a 
-			{
-			
-			}
-				
-		/* 
-		category widget 
-		*/
-			.widget_categories 
-			{
-			
-			}
-			
-			.widget_categories ul 
-			{
-			
-			}
-			
-			.widget_categories ul li 
-			{
-			
-			}
-			
-			.widget_categories a 
-			{
-			
-			}
-			
-		/* 
-		text widget 
-		*/
-			.textwidget 
-			{
-			
-			}
-			
-			.widget_text 
-			{
-			
-			}
-			
-			.textwidget p 
-			{
-			
-			}
 			
 	/*
 	Woocommerce
@@ -673,5 +555,5 @@ STYLES
 	*/
 
 /*//////////////////////////////
-CONDITIONAL/HACKS
+sec6.CONDITIONAL/HACKS
 //////////////////////////////*/
