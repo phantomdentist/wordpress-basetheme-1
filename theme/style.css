@@ -312,7 +312,7 @@ sec3.GLOBAL
 				list-style:none;
 			}
 			
-			li.gfield
+			.gfield
 			{
 				
 			}
@@ -501,15 +501,16 @@ sec5.STYLES
 		/*
 		post index and archives
 		*/
-			.index-post
+			.blog article,
+			.archive article
 			{
 			
 			}
 		
 		/*
-		singles page
+		single page
 		*/
-			.post
+			.single-post
 			{
 			
 			}
